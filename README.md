@@ -31,7 +31,7 @@ Start the application:
 
 bash
 Copy code
-npm start
+npm start or **node server.js**
 The server will start running on port 3000.
 
 Open your web browser and navigate to http://localhost:3000 to access the DressStore app.
