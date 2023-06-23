@@ -9,7 +9,7 @@ require('./config/db');
 // Product model
 const Product = require('./models/product');
 
-// Controller
+// Controller functions
 const productController = require('./controllers/productController');
 
 // Middleware
@@ -23,8 +23,9 @@ app.get('/', (req, res) => {
 
 app.get('/products', productController.getAllProducts);
 app.post('/products', productController.createProduct);
-
-// Add other routes for update, delete, etc.
+app.get('/products/:id', productController.getProductById);
+app.put('/products/:id', productController.updateProduct);
+app.delete('/products/:id', productController.deleteProduct);
 
 const port = 3000;
 app.listen(port, () => {
